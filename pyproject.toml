@@ -1,0 +1,32 @@
+[project]
+name = "biomed-tools"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Ben Wilks", email = "benjamin@mediartx.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "biopython>=1.86",
+    "httpx>=0.28.1",
+    "loguru>=0.7.3",
+    "pandas>=2.3.3",
+    "playwright>=1.57.0",
+    "python-dotenv>=1.2.1",
+    "requests>=2.32.5",
+    "sqlalchemy>=2.0.45",
+    "tqdm>=4.67.1",
+]
+
+[project.scripts]
+miner = "biomed_tools.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.9.22,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+]
